@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>冒e族</title>
+
+    <link  rel="shortcut icon" href="images/6.ico">
+    <link rel="stylesheet" href="css/index2.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/dynamics.js/1.1.5/dynamics.min.js"></script>
+
+</head>
+<body>
+
+<img src="images/logo2.png" alt="" id="logo"/>
+
+<div id="menu">
+    <div class="box">
+        <img alt=""/>
+        菜品组合
+    </div>
+    <ul class="nav" id="nav">
+        <li><a href="#">菜品1</a></li>
+        <li><a href="#">菜品2</a></li>
+        <li><a href="#">菜品3</a></li>
+        <li><a href="#">菜品4</a></li>
+        <li><a href="#">菜品5</a></li>
+        <li><a href="#">菜品6</a></li>
+    </ul>
+
+    <div class="wai" >
+        <ul class="jieshao" id="wai">
+            <li style="background: #33eedd"><img src="images/cai1.png"></li>
+            <li style="background: #2aee34">菜品2</li>
+            <li style="background: #eea72a">菜品3</li>
+            <li style="background: #9f7cee">菜品4</li>
+            <li style="background: #ee6e89">菜品5</li>
+            <li style="background: #ebee0c">菜品6</li>
+        </ul>
+    </div>
+</div>
+
+<div id="content">
+
+    <ul class="bgImg">
+        <li class="change01"><img src="images/slider01.jpg" alt=""/></li>
+        <li class="change02"><img src="images/slider02.jpg" alt=""/></li>
+        <li class="change03"><img src="images/slider03.jpg" alt=""/></li>
+        <li class="change04"><img src="images/slider04.jpg" alt=""/></li>
+        <li class="change05"><img src="images/slider05.jpg" alt=""/></li>
+    </ul>
+
+    <div class="boxTxt">
+        <h1>
+            13198276950(联系我们)
+            <img src="images/icon01_01.png" alt=""/>
+        </h1>
+        <ul class="txtImg">
+            <li class="change01"><img src="images/txt01.png" alt=""/></li>
+            <li class="change02"><img src="images/txt02.png" alt=""/></li>
+            <li class="change03"><img src="images/txt03.png" alt=""/></li>
+            <li class="change04"><img src="images/txt04.png" alt=""/></li>
+            <li class="change05"><img src="images/txt05.png" alt=""/></li>
+        </ul>
+        <div class="btn">
+            <a  id="guan" href="#">关于我们</a>
+        </div>
+
+
+        <div id="guanyu">
+            <img src="images/x.png" id="close1">
+            <div class="guanyuleft">
+                <a>五人行</a>
+                <a>冒e族</a>
+                <a>五人行，任我行，我能行</a>
+                <a>由五人行团队创建的冒e族，对于在夜深人寂的时候，还在加班的你想吃一顿可口的夜宵，这时候请拨打我们的电话，“冒e族”，马上送达，满足你凌晨对没事的享受。这里不仅仅只有快餐，这里还有各种你意想不到的正小吃、冒菜、中餐。</a>
+            </div>
+            <div class="guanyuright">
+                <img src="images/1111.jpg">
+            </div>
+        </div>
+        <p>
+            <span id="love" ></span>
+            <span id="num"></span><!--899546879--><span>喜欢</span>
+        <div id="box">
+            谢谢你这么喜欢我
+            <img src="images/close.png" id="close">
+        </div>
+        </p>
+    </div>
+</div>
+
+
+<script>
+    $(function(){
+        var start = 0;
+        var end = 89128111;
+        var o = {
+            value: start
+        };
+        dynamics.animate(o, {
+            value: end
+        }, {
+            drration: 2,
+            change: function () {
+                $('#num').text(parseInt(o.value))
+            }
+        });
+
+
+
+
+        $(".nav li a").click(function () {
+            $("#menu").css("width","100%","margin-left","0px");
+            $(".nav").css("width","100%","margin-left","0px");
+            $(".nav li").css("width","10%");
+            $(".box").css("right","0");
+            $(".wai").css("display","block");
+
+            $(".nav li a").not($(this).next()).css("color"," #fff");//影藏除点击相邻的带subtitle class属性的所有标签
+            $(this).css("color"," #ff705a");//切换显示方式
+        });
+        $(".box img").click(function () {
+            $("#menu").css("width","156px","margin-left","0px");
+            $(".nav").css("width","156px","margin-left","0px");
+            $(".nav li").css("width","100%");
+            $(".wai").css("display","none")
+        })
+
+
+    });
+    var wai=document.getElementById("wai");
+    var nav= document.getElementById("nav");
+    var li_img= nav.querySelectorAll("li");
+
+    for (var i=0;i<li_img.length;i++){
+        var sp=li_img[i] ;
+        sp.index = i ;
+        sp.onclick = function () {
+            wai.style.marginLeft=-1600*this.index+"px";
+        }
+
+    }
+
+    var love = document.getElementById("love");
+    var Box = document.getElementById("box");
+    var close = document.getElementById("close");
+    love.onclick  =function () {
+        Box.style.transform  = "scale(1)";
+        var n=parseInt(document.getElementById("num").textContent);
+        document.getElementById("num").textContent=n+1;
+    };
+    close.onclick = function () {
+        Box.style.transform  = "scale(0)";
+
+    };
+
+    var guan = document.getElementById("guan");
+    var guanyu = document.getElementById("guanyu");
+    var close1= document.getElementById("close1");
+    guan.onclick  =function () {
+        guanyu.style.animation = "move 0.5s linear";
+        guanyu.style.animationFillMode="forwards";
+        close1.style.opacity="1";
+        guanyu.style.display="block";
+    };
+    close1.onclick = function () {
+        guanyu.style.animation = "move1 0.5s linear";
+        close1.style.opacity="0";
+        guanyu.style.display="none";
+    };
+
+</script>
+</body>
+</html>
+
+
+
+
+
