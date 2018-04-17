@@ -66,14 +66,14 @@ ul{list-style: none}
 #menu:hover .nav{
     margin-left: 0;
 }
-#menu .box img{
+#menu .box1 img{
     background:url("../images/caidan.png") no-repeat;
     width: 28px;
     height: 28px;
     transition: all 0.4s ease;
 
 }
-#menu:hover .box img{
+#menu:hover .box1 img{
     background:url("../images/chacha.png") no-repeat;
     width: 28px;
     height: 28px;
@@ -90,7 +90,7 @@ ul{list-style: none}
     color: #fff;
     text-decoration: none;
 }
-.box{
+.box1{
     position: absolute;
     top: 40px;
     width: 156px;
@@ -100,7 +100,7 @@ ul{list-style: none}
 
 
 }
-.box img{
+.box1 img{
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -408,25 +408,27 @@ ul{list-style: none}
     font-size: 40px;
     margin: 20px auto;
 }
-.guanyuleft a:nth-of-type(2){
+.guanyuleft a:nth-of-type(2) {
     display: block;
-    width: 100%;
+    width: 60%;
     text-align: center;
     height: 30px;
-    color:#000;
-    text-shadow:5px 2px 6px  #33eedd;
+    color: #000;
+    text-shadow: 5px 2px 6px #33eedd;
     font-size: 30px;
-    margin: 40px auto;
+    margin-left: 280px;
+    margin-top: 50px;
 }
-.guanyuleft a:nth-of-type(3){
+.guanyuleft a:nth-of-type(3) {
     display: block;
     width: 100%;
     text-align: center;
     height: 30px;
-    color:#000;
-    text-shadow:5px 2px 6px  #33eedd;
+    color: #000;
+    text-shadow: 5px 2px 6px #33eedd;
     font-size: 24px;
-    margin: 40px auto;
+    margin-top: 100px;
+    margin-left: 116px;
 }
 .guanyuleft a:nth-of-type(4){
     display: block;
@@ -444,3 +446,146 @@ ul{list-style: none}
     height: 100%;
 }
 
+.box{
+    position: absolute;
+    width:980px;
+    height:auto;
+    margin:100px auto;
+}
+.box li:nth-of-type(1){
+    position: relative;
+    width:300px;
+    height:210px;
+    background: #3ed;
+    margin:20px 10px;
+    /*   box-shadow: 0 1px 4px rgba(0,0,0,0.27);*/
+    list-style: none;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: left;
+}
+.box li:nth-of-type(2){
+    position: relative;
+    width:770px;
+    height:210px;
+    background: #3ed;
+    margin:30px 10px;
+    /*   box-shadow: 0 1px 4px rgba(0,0,0,0.27);*/
+    list-style: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;text-align: left;
+}
+.box li:nth-of-type(2)>i {
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    text-align: right;
+    margin-top: 60px;
+}
+.box li:nth-of-type(1):before {
+    position: absolute;
+    content: '';
+    z-index: -4;
+    width: 90%;
+    height: 80%;
+    left: 14px;
+    bottom: 9px;
+    box-shadow: -3px 12px 20px #03A9F4;
+    transform: skew(-12deg) rotate(-4deg);
+}
+.box li:nth-of-type(1):after {
+    content: '';
+    position: absolute;
+    z-index: -4;
+    width: 90%;
+    height: 80%;
+    right: 14px;
+    bottom: 9px;
+    box-shadow: 3px 12px 20px #03A9F4;
+    transform: skew(12deg) rotate(4deg);
+}
+
+.box li:nth-of-type(2):before {
+    position: absolute;
+    content: '';
+    z-index: -4;
+    width: 90%;
+    height: 80%;
+    left: 15px;
+    bottom: 18px;
+    box-shadow: -3px 12px 20px #03A9F4;
+    transform: skew(-12deg) rotate(-4deg);
+}
+.box li:nth-of-type(2):after {
+    content: '';
+    position: absolute;
+    z-index: -4;
+    width: 90%;
+    height: 80%;
+    right: 15px;
+    bottom:18px;
+    box-shadow: 3px 12px 20px #03A9F4;
+    transform: skew(12deg) rotate(4deg);
+}
+
+.text {
+    font-size: 64px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    fill: none;/*字体不填充*/
+    stroke-width: 2px;/*字体外线条宽度*/
+    stroke-dasharray: 90 310;
+    animation: stroke 6s infinite linear;
+}
+.text1 {
+    font-size: 44px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    fill: none;/*字体不填充*/
+    stroke-width: 2px;/*字体外线条宽度*/
+    stroke-dasharray: 90 310;
+    animation: stroke 6s infinite linear;
+}
+.text2 {
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    fill: none;/*字体不填充*/
+    stroke-width: 2px;/*字体外线条宽度*/
+    stroke-dasharray: 90 310;
+    animation: stroke 6s infinite linear;
+}
+.text-1 {
+    stroke: #3498db;
+    text-shadow: 0 0 5px #3498db;
+    animation-delay: -1.5s;
+}
+.text-2 {
+    stroke: #f39c12;
+    text-shadow: 0 0 5px #f39c12;
+    animation-delay: -3s;
+}
+.text-3 {
+    stroke: #e74c3c;
+    text-shadow: 0 0 5px #e74c3c;
+    animation-delay: -4.5s;
+}
+.text-4 {
+    stroke: #9b59b6;
+    text-shadow: 0 0 5px #9b59b6;
+    animation-delay: -6s;
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset:400;
+    }
+}
